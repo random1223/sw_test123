@@ -25,14 +25,17 @@
   /**
    * Mobile nav toggle
    */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
   function mobileNavToogle() {
+    const btn = document.querySelector('.mobile-nav-toggle');
+    if (!btn) return;
     document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
+    btn.classList.toggle('bi-list');
+    btn.classList.toggle('bi-x');
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.mobile-nav-toggle')) mobileNavToogle();
+  });
 
   /**
    * Hide mobile nav on same-page/hash links
