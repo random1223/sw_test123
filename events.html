@@ -75,15 +75,47 @@
   <script>
     const PAGE_SIZE = 10;
     const container = document.getElementById('events-container');
+    let filteredData = EVENTS_DATA;
+    let currentPage = 1;
+
+    // Build year filter buttons
+    function buildFilters() {
+      const years = ['All'].concat(
+        [...new Set(EVENTS_DATA.map(e => e.date.match(/\d{4}/)?.[0]).filter(Boolean))].sort((a,b) => b-a)
+      );
+      const bar = document.createElement('div');
+      bar.className = 'events-filter';
+      years.forEach(y => {
+        const btn = document.createElement('button');
+        btn.textContent = y;
+        if (y === 'All') btn.classList.add('active');
+        btn.addEventListener('click', function() {
+          bar.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          filteredData = y === 'All' ? EVENTS_DATA : EVENTS_DATA.filter(e => e.date.includes(y));
+          currentPage = 1;
+          updateUrl(1);
+          renderPage(1);
+        });
+        bar.appendChild(btn);
+      });
+      container.parentElement.insertBefore(bar, container);
+    }
 
     function goToPage(pageNum) {
-      const url = new URL(window.location);
-      url.searchParams.set('page', pageNum);
-      window.history.pushState({}, '', url);
+      updateUrl(pageNum);
+      currentPage = pageNum;
       renderPage(pageNum);
     }
 
+    function updateUrl(pageNum) {
+      const url = new URL(window.location);
+      url.searchParams.set('page', pageNum);
+      window.history.pushState({}, '', url);
+    }
+
     function buildPagination(pageNum, totalPages, cls) {
+      if (totalPages <= 1) return '';
       const pageItems = Array.from({length: totalPages}, (_, i) => i + 1).map(p =>
         `<li class="page-item${p === pageNum ? ' active' : ''}">
           <a class="page-link" href="?page=${p}" onclick="goToPage(${p});return false;">${p}</a>
@@ -103,31 +135,28 @@
     }
 
     function renderPage(pageNum) {
-      const totalPages = Math.ceil(EVENTS_DATA.length / PAGE_SIZE);
-      pageNum = Math.min(Math.max(pageNum, 1), totalPages);
+      const totalPages = Math.ceil(filteredData.length / PAGE_SIZE);
+      pageNum = Math.min(Math.max(pageNum, 1), totalPages || 1);
       const start = (pageNum - 1) * PAGE_SIZE;
-      const items = EVENTS_DATA.slice(start, start + PAGE_SIZE);
+      const items = filteredData.slice(start, start + PAGE_SIZE);
 
-      const cards = items.map(e => `
-        <div class="row">
-          <div class="col-md-12 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                ${e.img.map(src => `<img src="${src}" alt="${e.title}">`).join('')}
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">${e.title}</h5>
-                <p class="fst-italic text-center">${e.date}</p>
-                ${e.paragraphs.map(p => `<p class="card-text">${p}</p>`).join('')}
-              </div>
-            </div>
+      const cards = items.length ? items.map(e => `
+        <div class="event-row">
+          <div class="event-img">
+            ${e.img.map(src => `<img src="${src}" alt="${e.title} — ${e.date}">`).join('')}
           </div>
-        </div>`).join('');
+          <div class="event-body">
+            <h5 class="card-title">${e.title}</h5>
+            <p class="event-date">${e.date}</p>
+            ${e.paragraphs.map(p => `<p class="card-text">${p}</p>`).join('')}
+          </div>
+        </div>`).join('') : '<p class="text-center py-5 text-muted">No events found.</p>';
 
       container.innerHTML = buildPagination(pageNum, totalPages, 'mb-4') + cards + buildPagination(pageNum, totalPages, 'mt-4');
       window.scrollTo(0, 0);
     }
 
+    buildFilters();
     const initialPage = parseInt(new URLSearchParams(window.location.search).get('page')) || 1;
     renderPage(initialPage);
   </script>
