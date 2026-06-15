@@ -105,26 +105,30 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Initiate glightbox
+   * Initiate glightbox (optional)
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll('.swiper').forEach(function(swiper) {
-      let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
-      new Swiper(swiper, config);
-    });
+  if (typeof GLightbox !== 'undefined') {
+    GLightbox({ selector: '.glightbox' });
   }
-  window.addEventListener('load', initSwiper);
+
+  /**
+   * Initiate Pure Counter (optional)
+   */
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
+
+  /**
+   * Init swiper sliders (optional)
+   */
+  if (typeof Swiper !== 'undefined') {
+    function initSwiper() {
+      document.querySelectorAll('.swiper').forEach(function(swiper) {
+        let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
+        new Swiper(swiper, config);
+      });
+    }
+    window.addEventListener('load', initSwiper);
+  }
 
 })();
