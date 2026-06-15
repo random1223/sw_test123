@@ -70,27 +70,66 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/nav.js"></script>
-  <script src="events-data.js"></script>
+  <script src="assets/js/events-data.js"></script>
 
   <script>
-    const page = EVENTS_DATA.slice(0, 25);
+    const PAGE_SIZE = 10;
     const container = document.getElementById('events-container');
-    container.innerHTML = page.map(e => `
-      <div class="row">
-        <div class="col-md-12 d-flex align-items-stretch">
-          <div class="card">
-            <div class="card-img">
-              ${e.img.map(src => `<img src="${src}" alt="${e.title}">`).join('')}
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">${e.title}</h5>
-              <p class="fst-italic text-center">${e.date}</p>
-              ${e.paragraphs.map(p => `<p class="card-text">${p}</p>`).join('')}
+
+    function goToPage(pageNum) {
+      const url = new URL(window.location);
+      url.searchParams.set('page', pageNum);
+      window.history.pushState({}, '', url);
+      renderPage(pageNum);
+    }
+
+    function buildPagination(pageNum, totalPages, cls) {
+      const pageItems = Array.from({length: totalPages}, (_, i) => i + 1).map(p =>
+        `<li class="page-item${p === pageNum ? ' active' : ''}">
+          <a class="page-link" href="?page=${p}" onclick="goToPage(${p});return false;">${p}</a>
+        </li>`).join('');
+      return `
+        <nav class="${cls}">
+          <ul class="pagination justify-content-center">
+            <li class="page-item${pageNum === 1 ? ' disabled' : ''}">
+              <a class="page-link" href="?page=${pageNum - 1}" onclick="goToPage(${pageNum - 1});return false;">Previous</a>
+            </li>
+            ${pageItems}
+            <li class="page-item${pageNum === totalPages ? ' disabled' : ''}">
+              <a class="page-link" href="?page=${pageNum + 1}" onclick="goToPage(${pageNum + 1});return false;">Next</a>
+            </li>
+          </ul>
+        </nav>`;
+    }
+
+    function renderPage(pageNum) {
+      const totalPages = Math.ceil(EVENTS_DATA.length / PAGE_SIZE);
+      pageNum = Math.min(Math.max(pageNum, 1), totalPages);
+      const start = (pageNum - 1) * PAGE_SIZE;
+      const items = EVENTS_DATA.slice(start, start + PAGE_SIZE);
+
+      const cards = items.map(e => `
+        <div class="row">
+          <div class="col-md-12 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                ${e.img.map(src => `<img src="${src}" alt="${e.title}">`).join('')}
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">${e.title}</h5>
+                <p class="fst-italic text-center">${e.date}</p>
+                ${e.paragraphs.map(p => `<p class="card-text">${p}</p>`).join('')}
+              </div>
             </div>
           </div>
-        </div>
-      </div>`).join('') +
-      '<h3><a href="events2.html">Go To Next Page</a></h3>';
+        </div>`).join('');
+
+      container.innerHTML = buildPagination(pageNum, totalPages, 'mb-4') + cards + buildPagination(pageNum, totalPages, 'mt-4');
+      window.scrollTo(0, 0);
+    }
+
+    const initialPage = parseInt(new URLSearchParams(window.location.search).get('page')) || 1;
+    renderPage(initialPage);
   </script>
 
 </body>
