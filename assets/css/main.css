@@ -531,12 +531,20 @@ section:nth-child(even),
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  opacity: 0.55;
+  opacity: 0.7;
 }
 
 .hero .container {
   position: relative;
   z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 100%);
 }
 
 .hero h2 {
@@ -545,16 +553,18 @@ section:nth-child(even),
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.08;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
 }
 
 .hero h3 {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.95);
   margin: 16px 0 0;
   font-size: 19px;
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.5;
   max-width: 680px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
 }
 
 .hero .btn-get-started {
