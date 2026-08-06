@@ -7,7 +7,38 @@ const EVENTS_DATA = [
       "San Diego, California, Pacific Northwest Soundwave recently presented a successful outdoor community performance in San Diego, bringing together families, local residents, and supporters to celebrate the power of music and advocate for deaf and hard-of-hearing children.",
       "The audience responded with enthusiastic applause and overwhelmingly positive feedback, creating a warm and encouraging atmosphere for the performers. Many families expressed appreciation for Soundwave's commitment to inclusion and its efforts to raise awareness of the unique strengths and potential of deaf and hard-of-hearing children."
     ]
-  },{
+  },
+  {
+    "img": ["assets/img/events/202606_1.jpg"],
+    "title": "Soundwave Partners with Local Nonprofit to Bring Music and Art to the Community",
+    "date": "June 2026",
+    "paragraphs": [
+      "Soundwave recently partnered with a local nonprofit organization to host a vibrant community performance celebrating the power of music, art, and community engagement. ",
+      "The collaborative event featured live musical performances by Soundwave's young musicians alongside interactive art activities that welcomed children and families of all backgrounds. Community members gathered throughout the event to enjoy the performances, participate in creative activities, and connect with local organizations dedicated to serving the community."
+      "The audience responded enthusiastically, with many families expressing their appreciation for an event that combined music, creativity, and inclusion in a welcoming environment. The partnership reflected a shared commitment to enriching the community through the arts while creating meaningful opportunities for children to learn, perform, and express themselves."
+    ]
+  },
+  {
+    "img": ["assets/img/events/202605_2.jpg"],
+    "title": "Soundwave Outdoor Performance Raises Awareness for Deaf and Hard-of-Hearing Children",
+    "date": "May 2026",
+    "paragraphs": [
+      "Soundwave recently presented an outdoor community performance to raise awareness and advocate for deaf and hard-of-hearing children through the universal language of music.",
+      "In addition to showcasing musical talent, the performance highlighted the importance of ensuring that deaf and hard-of-hearing children have access to music education, supportive learning environments, and opportunities to participate fully in community activities. Through music, Soundwave aims to foster greater understanding, inclusion, and appreciation for the abilities and potential of every child."
+    ]
+  },
+
+{
+    "img": ["assets/img/events/202605_1.jpg"],
+    "title": "Celebrates Mother's Day with Outdoor Community Performance",
+    "date": "May 2026",
+    "paragraphs": [
+      "In celebration of Mother's Day, Soundwave hosted a special outdoor musical performance at a local business center, bringing together families, employees, and community members for an afternoon of music and appreciation.",
+      "Events like these reflect Soundwave's commitment to using music to strengthen communities, inspire young musicians, and create meaningful connections through the arts. We are grateful to everyone who stopped to listen, support our performers, and celebrate this special occasion with us. Soundwave looks forward to continuing its community outreach through performances that bring people together and share the joy of music."
+    ]
+  },
+
+  {
     "img": ["assets/img/events/202604_1.jpg"],
     "title": "Soundwave Volunteers Bring Live Music Performance to Local Senior Care Community",
     "date": "April 2026",
