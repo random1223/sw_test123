@@ -49,6 +49,16 @@ const EVENTS_DATA = [
   },
 
   {
+    "img": ["assets/img/events/202604_2.jpg", "assets/img/events/202604_3.jpg"],
+    "title": "Original Composition by Soundwave Volunteer Inspires Young Musicians",
+    "date": "April 2026",
+    "paragraphs": [
+      "Soundwave recently celebrated a special milestone as an original musical composition written by one of its dedicated volunteers was performed by a group of young musicians during a community concert.",
+      "The performance showcased not only the talent of the young performers but also the creativity and dedication of volunteers who support Soundwave's mission. The original piece was written to encourage children to express themselves through music, embrace creativity, and discover the confidence that comes from performing together.",
+      "The audience warmly received the performance, applauding the young musicians for their expressive interpretation of the new composition. For many of the performers, presenting an original work offered a unique and rewarding experience, demonstrating that music is not only something to perform but also something to create and share. Through projects like this, Soundwave continues to inspire the next generation of musicians by providing meaningful opportunities to learn, perform, and grow. The organization also remains committed to advocating for deaf and hard-of-hearing children by promoting inclusive music education and ensuring that every child has the opportunity to experience the joy and transformative power of music. Soundwave extends its gratitude to the volunteer composer, the young musicians, their families, and everyone who supported this inspiring performance. Together, we continue to foster creativity, inclusion, and a lifelong love of music in our community."
+    ]
+  },
+  {
     "img": ["assets/img/events/202604_1.jpg"],
     "title": "Soundwave Volunteers Bring Live Music Performance to Local Senior Care Community",
     "date": "April 2026",
