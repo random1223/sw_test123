@@ -9,6 +9,15 @@ const EVENTS_DATA = [
     ]
   },
   {
+    "img": ["assets/img/events/202606_2.jpg"],
+    "title": "Soundwave Partners with Local Music School to Inspire the Next Generation of Musicians",
+    "date": "June 2026",
+    "paragraphs": [
+      "Soundwave recently partnered with a local music school to present a community performance that celebrated the joy of music and inspired young musicians to pursue their passion for the arts.",
+      "The event featured performances by students and young musicians who shared a diverse repertoire of music with families, friends, and community members. Audience members gathered to enjoy the performances, responding with enthusiastic applause and encouragement for the performers. The event created a welcoming atmosphere where music brought people together and highlighted the dedication and hard work of the participating students.",
+      "As part of its mission, Soundwave continues to advocate for inclusive music education, including expanding opportunities for deaf and hard-of-hearing children to participate in music programs and community performances. By working with local music educators and community partners, Soundwave is committed to inspiring the next generation of musicians and making music accessible to every child."
+    ]
+  },  {
     "img": ["assets/img/events/202606_1.jpg"],
     "title": "Soundwave Partners with Local Nonprofit to Bring Music and Art to the Community",
     "date": "June 2026",
@@ -18,6 +27,7 @@ const EVENTS_DATA = [
       "The audience responded enthusiastically, with many families expressing their appreciation for an event that combined music, creativity, and inclusion in a welcoming environment. The partnership reflected a shared commitment to enriching the community through the arts while creating meaningful opportunities for children to learn, perform, and express themselves."
     ]
   },
+
   {
     "img": ["assets/img/events/202605_2.jpg"],
     "title": "Soundwave Outdoor Performance Raises Awareness for Deaf and Hard-of-Hearing Children",
