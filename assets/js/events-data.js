@@ -1,6 +1,6 @@
 const EVENTS_DATA = [
   {
-    "img": ["assets/img/events/202607_1.jpg", "assets/img/events/202607_2.jpg"],
+    "img": ["assets/img/events/202607_2.jpg", "assets/img/events/202607_1.jpg"],
     "title": "Brings Music and Inclusion to San Diego",
     "date": "July 2026",
     "paragraphs": [
