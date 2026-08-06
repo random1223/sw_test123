@@ -1,5 +1,13 @@
 const EVENTS_DATA = [
   {
+    "img": ["assets/img/events/202607_1.jpg"],
+    "title": "Brings Music and Inclusion to San Diego",
+    "date": "July 2026",
+    "paragraphs": [
+      "San Diego, California, Pacific Northwest Soundwave recently presented a successful outdoor community performance in San Diego, bringing together families, local residents, and supporters to celebrate the power of music and advocate for deaf and hard-of-hearing children.",
+      "The audience responded with enthusiastic applause and overwhelmingly positive feedback, creating a warm and encouraging atmosphere for the performers. Many families expressed appreciation for Soundwave's commitment to inclusion and its efforts to raise awareness of the unique strengths and potential of deaf and hard-of-hearing children."
+    ]
+  },{
     "img": ["assets/img/events/202604_1.jpg"],
     "title": "Soundwave Volunteers Bring Live Music Performance to Local Senior Care Community",
     "date": "April 2026",
