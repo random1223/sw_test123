@@ -14,7 +14,7 @@ const EVENTS_DATA = [
     "date": "June 2026",
     "paragraphs": [
       "Soundwave recently partnered with a local nonprofit organization to host a vibrant community performance celebrating the power of music, art, and community engagement. ",
-      "The collaborative event featured live musical performances by Soundwave's young musicians alongside interactive art activities that welcomed children and families of all backgrounds. Community members gathered throughout the event to enjoy the performances, participate in creative activities, and connect with local organizations dedicated to serving the community."
+      "The collaborative event featured live musical performances by Soundwave's young musicians alongside interactive art activities that welcomed children and families of all backgrounds. Community members gathered throughout the event to enjoy the performances, participate in creative activities, and connect with local organizations dedicated to serving the community.",
       "The audience responded enthusiastically, with many families expressing their appreciation for an event that combined music, creativity, and inclusion in a welcoming environment. The partnership reflected a shared commitment to enriching the community through the arts while creating meaningful opportunities for children to learn, perform, and express themselves."
     ]
   },
