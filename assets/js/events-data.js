@@ -1,7 +1,18 @@
 const EVENTS_DATA = [
   {
+      "img": ["assets/img/events/202608_4.jpg"],
+      "title": "London Music and Inclusion Outreach",
+      "date": "August 2026",
+      "paragraphs": [
+        "In August 2026, Soundwave volunteers conducted an outdoor piano performance in London as part of the organization’s charitable outreach for children with special needs, including deaf and hard-of-hearing children. The volunteers shared live piano music in a public setting, providing an opportunity to engage with members of the community through music while promoting Soundwave’s message of inclusion and support for children with different abilities. The activity also gave volunteers an opportunity to contribute their musical skills as part of Soundwave’s community service efforts.",
+        "The performance attracted members of the public and received a positive response from those who gathered to listen. Through this activity, Soundwave combined volunteer service and music with public awareness efforts, helping advance its mission of encouraging inclusion, understanding, and community support for children with special needs.",
+        "The London performance was one of Soundwave’s international outreach activities demonstrating how volunteers can use their skills and time to further the organization’s charitable purpose."
+      ]
+    },
+
+    {
       "img": ["assets/img/events/202608_3.jpg"],
-      "title": "Community Music Outreach — Paris, France",
+      "title": "Paris Community Music Outreach",
       "date": "August 2026",
       "paragraphs": [
         "Soundwave volunteers carried out a community outreach activity in Paris, France, using live piano music to support the organization’s mission of promoting inclusion and advocating for children with special needs, including deaf and hard-of-hearing children.",
@@ -9,7 +20,20 @@ const EVENTS_DATA = [
         "The performance drew a large audience and received an enthusiastic response from those who listened. By providing volunteer-led music in a public setting, Soundwave was able to engage people from different backgrounds and extend its charitable outreach to an international community.",
         "The Paris activity was part of Soundwave’s broader effort to use volunteer service, music, and public engagement to encourage awareness, inclusion, and support for children with special needs."
       ]
-    },{
+    },
+
+    {
+      "img": ["assets/img/events/202608_5.jpg"],
+      "title": "Volunteer Music Learning and Development",
+      "date": "August 2026",
+      "paragraphs": [
+        "In August 2026, Soundwave volunteers observed local violin musicians during the organization’s international outreach activities in Europe. The volunteers used the opportunity to learn from different musical styles and public performance approaches and to gain ideas that could be incorporated into future Soundwave volunteer performances.",
+        "This experience supported the development of volunteers’ musical and performance skills, which are used in Soundwave’s community outreach activities. Strengthening these skills helps volunteers provide more effective and engaging performances when participating in Soundwave programs that promote inclusion and advocate for children with special needs, including deaf and hard-of-hearing children.",
+        "Through continued learning and exposure to different musical traditions, Soundwave encourages volunteers to improve their abilities and bring those skills back to the organization’s charitable activities and community performances."
+      ]
+    },
+
+    {
       "img": ["assets/img/events/202608_2.jpg"],
       "title": "International Community Outreach — Barcelona, Spain",
       "date": "August 2026",
