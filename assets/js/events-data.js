@@ -9,7 +9,6 @@ const EVENTS_DATA = [
         "The London performance was one of Soundwave’s international outreach activities demonstrating how volunteers can use their skills and time to further the organization’s charitable purpose."
       ]
     },
-
     {
       "img": ["assets/img/events/202608_3.jpg"],
       "title": "Paris Community Music Outreach",
