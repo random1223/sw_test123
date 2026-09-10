@@ -1,5 +1,15 @@
 const EVENTS_DATA = [
   {
+      "img": ["assets/img/events/202608_1.jpg"],
+      "title": "August 2026 Community Music Outreach",
+      "date": "August 2026",
+      "paragraphs": [
+        "Soundwave volunteers held an outdoor music performance to raise awareness and advocate for deaf and hard-of-hearing children. Through live music in a public community setting, the volunteers used their talents to promote inclusion, accessibility, and greater understanding of children with hearing differences.",
+        "Through activities like this, Soundwave continues to connect music, community service, and advocacy—using volunteer performances to foster a more inclusive and compassionate community where every child deserves to be heard.",
+        "The performance was warmly received by the audience, with many community members stopping to listen and showing their appreciation and support. The event created a positive and welcoming community experience while helping bring greater visibility to the importance of inclusion for deaf and hard-of-hearing children."
+      ]
+    },
+    {
     "img": ["assets/img/events/202607_2.jpg", "assets/img/events/202607_1.jpg"],
     "title": "Brings Music and Inclusion to San Diego",
     "date": "July 2026",
